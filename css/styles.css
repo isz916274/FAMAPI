@@ -1,0 +1,241 @@
+/* Variables de tu paleta */
+:root {
+  --azul: #0b3c8c;
+  --azul-oscuro: #062a5e;
+  --amarillo: #f4c300;
+  --amarillo-hover: #d4a900;
+  --gris-claro: #f8f9fa;
+  --blanco: #ffffff;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.navbar-logo {
+  height: auto;
+  width: 120px; /* Tamaño para celulares */
+  transition: var(--transition);
+}
+
+/* Cuando la pantalla sea más grande que 992px (PC) */
+@media (min-width: 992px) {
+  .navbar-logo {
+    width: 180px; /* Tamaño para PC */
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--azul-oscuro) !important;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+}
+.navbar {
+  background-color: var(--azul-oscuro) !important;
+  padding: 1rem 0;
+  transition: var(--transition);
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--amarillo) !important;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item:hover {
+  background-color: var(--azul);
+  color: white;
+}
+
+/* Botón de Contacto en Nav */
+.btn-warning {
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+  color: var(--azul-oscuro) !important;
+  font-weight: 700 !important;
+  transition: var(--transition);
+}
+
+.btn-warning:hover {
+  background-color: var(--amarillo-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(244, 195, 0, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 90vh;
+  background: linear-gradient(rgba(6, 42, 94, 0.85), rgba(6, 42, 94, 0.85)),
+    url('https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&q=80&w=1920');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 80px;
+}
+
+.hero-section h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Cards de Servicios */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--amarillo);
+  margin: 15px auto;
+}
+
+.service-card {
+  transition: var(--transition);
+  border-bottom: 4px solid transparent !important;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 4px solid var(--amarillo) !important;
+}
+
+.service-card i {
+  color: var(--azul) !important;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Sección de Video y Oscuros */
+.bg-dark {
+  background-color: var(--azul-oscuro) !important;
+}
+
+.text-secondary {
+  color: #adb5bd !important;
+}
+
+/* Clientes y Certificaciones */
+.grayscale {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#certificaciones .img-thumbnail {
+  transition: var(--transition);
+  padding: 15px;
+}
+
+#certificaciones .col:hover img {
+  transform: translateY(-5px);
+  background: white !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Contacto */
+#contacto i {
+  transition: var(--transition);
+}
+
+#contacto a:hover i {
+  transform: scale(1.3);
+}
+
+/* Animaciones suaves para Bootstrap */
+.collapse {
+  transition: var(--transition);
+}
+
+/* Altura fija responsiva */
+.carousel-img {
+  height: 500px; /* Altura en PC */
+  object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarse */
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 400px; /* Altura un poco más baja en celulares */
+  }
+}
+
+/* Capa oscura (Overlay) */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  z-index: 1;
+}
+
+/* Estilo del Texto sobre la imagen */
+.custom-caption {
+  z-index: 2; /* Por encima del overlay */
+  bottom: 20%; /* Centra un poco más el texto verticalmente */
+  padding: 0 15px;
+}
+
+.custom-caption h5 {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.custom-caption p {
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* En celulares bajamos el tamaño de letra */
+@media (max-width: 576px) {
+  .custom-caption h5 {
+    font-size: 1.2rem;
+  }
+  .custom-caption p {
+    font-size: 0.9rem;
+  }
+}

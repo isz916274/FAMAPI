@@ -1,0 +1,69 @@
+/* Nuevo Diseño de Footer */
+.footer-industrial {
+  background-color: var(--azul-oscuro);
+  border-top: 4px solid var(--amarillo);
+}
+
+.text-secondary-light {
+  color: #ced4da;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Enlaces del Footer */
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #ced4da;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 0.95rem;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--amarillo);
+  transform: translateX(8px);
+}
+
+/* Iconos Sociales */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--blanco);
+  border-radius: 50%;
+  margin-right: 10px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background: var(--amarillo);
+  color: var(--azul-oscuro);
+  transform: translateY(-3px);
+}
+
+/* Contacto y Bottom Bar */
+.footer-contact i {
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-legal a:hover {
+  color: var(--amarillo) !important;
+}
+
+/* Animaciones suaves para Bootstrap */
+.collapse {
+  transition: var(--transition);
+}
